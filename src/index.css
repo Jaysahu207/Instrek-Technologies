@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-borderMove {
+  position: absolute;
+  inset: -2px; /* Expands just outside the button */
+  border-radius: inherit; /* Ensures smooth rounded edges */
+  padding: 2px; /* Creates the border thickness */
+  background-size: 300% 300%;
+  animation: borderMove 3s infinite linear;
+  -webkit-mask: linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; /* This makes the inner background transparent */
+}

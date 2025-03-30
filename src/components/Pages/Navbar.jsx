@@ -185,7 +185,7 @@ const Navbar = () => {
           className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(true)}
         >
-          <Menu size={32} className="text-white" />
+          <Menu size={32} className="text-black" />
         </button>
       </div>
 
@@ -268,10 +268,10 @@ const Navbar = () => {
 
           <li>
             <NavLink
-              to="/blog"
+              to="/"
               className="block py-2 cursor-pointer hover:text-gray-400 transition"
             >
-              Blog
+              Trainings
             </NavLink>
           </li>
 
